@@ -1,0 +1,241 @@
+:root {
+  --light-blue: #1a7bd1;
+  --dark-gray: #2c2d3f;
+  --light-gray: #757575;
+  --bg-white: #f6f6f6;
+  --bg-newsletter: #edf2ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--dark-gray);
+}
+
+h2,
+h3 {
+  font-weight: 600;
+}
+
+p {
+  color: var(--light-gray);
+  font-size: 14px;
+}
+
+/* Utility Classes */
+.text-primary {
+  color: var(--light-blue);
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--light-blue);
+  color: #fff;
+}
+
+.btn-secondray {
+  background-color: var(--dark-gray);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #135fa1;
+}
+
+.btn-secondray:hover {
+  background-color: #4c4f6e;
+}
+
+/* Home Start */
+#home .navbar {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  top: 0;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+#home .navbar nav {
+  display: flex;
+  justify-content: space-between;
+  min-height: 100px;
+  padding: 0 2rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+#home .navbar nav ul {
+  display: flex;
+}
+
+#home .navbar nav ul a {
+  margin: 0 15px;
+  color: var(--dark-gray);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#home .navbar nav ul a:hover {
+  color: var(--light-blue);
+}
+
+#home .home-content {
+  background: url("img/bg-home.jpg") no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  margin-top: 4.5rem;
+  align-items: center;
+}
+
+#home .home-content .col {
+  width: 1200px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+#home .home-content .col small {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+#home .home-content .col small img {
+  vertical-align: middle;
+}
+
+#home .home-content .col h1 {
+  font-size: 40px;
+  max-width: 600px;
+  line-height: 1.4;
+}
+
+#home .home-content .col a {
+  margin-right: 15px;
+}
+
+nav button {
+  color: #2c2d3f;
+  background-color: #2c2d3f;
+}
+
+/* Home End */
+
+.title {
+  text-align: center; /* توسيط النص */
+  margin-bottom: 2rem; /* إضافة مسافة أسفل العنوان */
+  margin-right: 0; /* إزالة الهامش غير الضروري */
+}
+
+.title h2 {
+  font-size: 2rem; /* تكبير العنوان */
+  font-weight: bold;
+  color: var(--dark-gray); /* لون احترافي */
+  margin-bottom: 10px;
+}
+
+.title img {
+  display: block;
+  margin: 10px auto; /* توسيط الصورة */
+  max-width: 100px; /* ضبط حجم الصورة */
+}
+
+.title p {
+  font-size: 1.1rem;
+  color: var(--light-gray);
+  max-width: 600px; /* تحديد عرض الفقرة */
+  margin: auto; /* توسيط النص */
+}
+
+#contact {
+  background-color: var(--bg-white);
+  padding: 6rem 0;
+}
+
+#contact .row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  column-gap: 3rem;
+  margin-top: 6rem;
+}
+
+#contact .row img {
+  justify-self: end;
+  max-width: 100%;
+  margin-right: 30px;
+}
+
+#contact .row form .form-control {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.5rem;
+  margin-bottom: 20px;
+}
+
+#contact .row .form-control input,
+#contact .row .form-control select,
+#contact .row textarea {
+  padding: 15px;
+  width: 100%;
+  color: var(--dark-gray);
+  background: var(--bg-light);
+  outline-color: var(--light-blue);
+  border: 1px solid #ccc;
+  margin-left: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+#contact .row .form-control input:focus,
+#contact .row .form-control select:focus,
+#contact .row textarea:focus {
+  border-color: var(--dark-blue);
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#contact .btn {
+  padding: 15px 30px;
+  border: none;
+  margin-top: 25px;
+  background-color: var(--light-blue); /* لون زر جذاب */
+  color: white;
+  font-size: 16px;
+  margin-left: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+#contact .btn:hover {
+  background-color: var(--dark-gray);
+}

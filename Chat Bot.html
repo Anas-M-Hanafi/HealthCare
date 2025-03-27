@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Chat Bot | Anas Hanafi</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="header">
+          <h1>AI Chat Bot</h1>
+          <h2>Hello, There</h2>
+          <p>How can I help you today?</p>
+        </div>
+
+        <div class="chat_list"></div>
+
+        <form action="#" class="typing-form">
+          <div class="input-wrapper">
+            <input
+              type="text"
+              class="typing-input"
+              placeholder="Enter a Prompt here"
+              required
+            />
+            <button type="submit"><i class="fa-solid fa-arrow-up"></i></button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script src="Chat Bot.js"></script>
+    <style>
+      /* Import Google Font - Poppins */
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background-color: #242424;
+      }
+
+      section {
+        height: 100vh;
+      }
+
+      .container {
+        width: 80%;
+        margin: 0 auto;
+        max-width: 1000px;
+      }
+
+      .container .header {
+        padding-top: 50px;
+        text-align: center;
+      }
+
+      .container .header h1 {
+        font-size: 60px;
+        background: linear-gradient(to right, #4285fa, #d96570);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        margin-bottom: 50px;
+      }
+
+      .container .header h2 {
+        font-size: 45px;
+        color: #e3e3e3;
+      }
+
+      .container .header p {
+        color: #a6a6a6;
+        font-size: 30px;
+      }
+
+      .typing-form {
+        margin-top: -10%;
+      }
+
+      .input-wrapper {
+        display: flex;
+        align-items: center;
+        border-radius: 25px;
+        padding: 5px 10px;
+        background: #383838;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        transition: background 0.3s;
+      }
+
+      .typing-input {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        border-radius: 25px;
+        outline: none;
+        background: #383838;
+        font-size: 16px;
+        color: #fff;
+      }
+
+      .input-wrapper button {
+        background: transparent;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        color: rgb(0, 0, 0);
+        transition: 0.3s ease-in-out;
+        opacity: 0;
+      }
+
+      .typing-form .input-wrapper input:valid ~ button {
+        opacity: 1;
+      }
+
+      .input-wrapper button i {
+        font-size: 18px;
+      }
+
+      .input-wrapper button:hover {
+        color: #fdfdfd;
+      }
+
+      .chat_list {
+        margin-top: 80px;
+        height: auto;
+        padding-bottom: 120px;
+      }
+
+      .chat_list .message {
+        margin-bottom: 30px;
+      }
+
+      .chat_list .message_content {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .chat_list .message_content img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        align-self: flex-start;
+        margin-top: 5px;
+        margin-top: -20px;
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 132px;
+        margin-bottom: 5%;
+      }
+
+      .chat_list .message_content .text {
+        color: #e3e3e3;
+        white-space: pre-wrap;
+      }
+
+      .chat_list .message i {
+        color: #444;
+        cursor: pointer;
+        margin-left: 50px;
+        font-size: 20px;
+        margin-top: 5px;
+        transition: 0.3s;
+      }
+
+      .chat_list .message i:hover {
+        color: #e3e3e3;
+      }
+
+      .chat_list .message .loading_indicoator {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .chat_list .message.loading .loading_indicoator {
+        display: flex;
+      }
+
+      .chat_list .message .loading_indicoator .loading_Bar {
+        height: 11px;
+        width: 100%;
+        border-radius: 5px; /* زوايا ناعمة */
+        background: linear-gradient(to right, #4285fa, #242424, #4285fa);
+        background-size: 200% 100%;
+        animation: loading 3s linear infinite;
+      }
+
+      /* حركة التحميل */
+      @keyframes loading {
+        0% {
+          background-position: -100% 0;
+        }
+        100% {
+          background-position: 100% 0;
+        }
+      }
+
+      .chat_list .message .loading .loading_Ba:last-child {
+        width: 70%;
+      }
+    </style>
+  </body>
+</html>
